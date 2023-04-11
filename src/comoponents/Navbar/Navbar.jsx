@@ -10,7 +10,7 @@ export default function Navbar({ dataAboutPosition }) {
   return (
     <div
       className={
-        dataAboutPosition < 100 ? style.contentAllColor : style.contentAll
+        dataAboutPosition < 100 ? style.contentAllFixed : style.contentAll
       }
       style={vistPhone ? { height: "100vh" } : {}}
     >

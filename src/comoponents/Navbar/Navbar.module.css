@@ -14,7 +14,7 @@
   display: none;
 }
 
-.contentAllColor {
+.contentAllFixed {
   display: flex;
   justify-content: space-between;
   background-color: #fafafa;
@@ -39,7 +39,7 @@
 }
 
 .contentAll img,
-.contentAllColor img {
+.contentAllFixed img {
   width: 70px;
 }
 
@@ -73,7 +73,7 @@
   }
 
   .contentAll img,
-  .contentAllColor img {
+  .contentAllFixed img {
     display: none;
   }
 
@@ -92,7 +92,7 @@
     align-items: center;
   }
 
-  .contentAllColor {
+  .contentAllFixed {
     display: none;
   }
 }
