@@ -40,10 +40,16 @@
 
 .contentAll h4 {
   font-size: 1rem;
-  margin-bottom: -4rem;
+  margin-bottom: 2rem;
   text-align: center;
   width: 100%;
   height: max-content;
+}
+
+@media (max-width: 970px) {
+  .contentReviws {
+    overflow-y: scroll;
+  }
 }
 
 @media (max-width: 700px) {

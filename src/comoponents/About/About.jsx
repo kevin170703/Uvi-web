@@ -1,21 +1,19 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState } from "react";
 import { useRef } from "react";
 import CardReview from "../CardReview/CardReview";
 import style from "./About.module.css";
 
-export default function About({ onAction }) {
+export default function About({ receiveDataAbout }) {
   //Animation scroll
 
   const aboutRef = useRef();
-  // const [activateAnimation, setActivateAnimation] = useState(true);
 
   useEffect(() => {
     const animationScroll = () => {
       const title = aboutRef.current;
       const { y } = title.getBoundingClientRect();
-      onAction(y);
+      receiveDataAbout(y);
     };
     window.addEventListener("scroll", animationScroll);
   }, []);
