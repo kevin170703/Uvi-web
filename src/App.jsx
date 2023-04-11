@@ -8,15 +8,15 @@ import Navbar from "./comoponents/Navbar/Navbar";
 import Plans from "./comoponents/Plans/Plans";
 
 function App() {
-  const [dataY, setDataY] = useState();
+  const [positionAboutY, setPositionAboutY] = useState();
   function handleAction(y) {
-    setDataY(y);
+    setPositionAboutY(y);
   }
   return (
     <div className="App">
-      <Navbar dataAboutPosition={dataY} />
+      <Navbar dataAboutPosition={positionAboutY} />
       <Home />
-      <About onAction={handleAction} />
+      <About receiveDataAbout={handleAction} />
       <Plans />
       <Form />
       <Footer />
