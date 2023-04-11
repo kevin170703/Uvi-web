@@ -33,7 +33,7 @@
   margin: 0;
 }
 
-.price p {
+.price span {
   font-size: 1rem;
   margin: 0;
   color: #aaa;
@@ -113,7 +113,7 @@
   margin: 0;
 }
 
-.pricePopular p {
+.pricePopular span {
   font-size: 1rem;
   margin: 0;
   color: #aaa;

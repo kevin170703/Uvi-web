@@ -10,7 +10,7 @@ export default function CardPlans({ popular }) {
 
         <p className={popular ? style.pricePopular : style.price}>
           26$
-          <p>/mes</p>
+          <span>/mes</span>
         </p>
       </div>
       <ul>
