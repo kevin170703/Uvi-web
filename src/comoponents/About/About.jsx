@@ -1,8 +1,9 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from "react";
 import CardReview from "../CardReview/CardReview";
 import style from "./About.module.css";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 export default function About({ receiveDataAbout }) {
   //Animation scroll
@@ -19,6 +20,36 @@ export default function About({ receiveDataAbout }) {
   }, []);
   //Animation scroll
 
+  const [reviw, setReview] = useState(0);
+  let reviews = [
+    <CardReview
+      reviewText={
+        "Muy buen servicio, me ayudo a conseguir mi primer trabajo luego de la revision de mi CV."
+      }
+      nameUser={"kevin correa"}
+    />,
+    <CardReview
+      reviewText={"Muy buen servicio, me ayudo a conseguir mi primer trabajo."}
+      nameUser={"Uvi-user"}
+    />,
+    <CardReview
+      reviewText={
+        "Me ayudo a conseguir mi primer trabajo luego de la revision de mi CV."
+      }
+      nameUser={"Uvi-user02"}
+    />,
+  ];
+
+  function changuePlanLeft() {
+    const lengthReviws = reviews.length;
+    setReview(reviw === 0 ? lengthReviws - 1 : reviw - 1);
+  }
+
+  function changuePlanRight() {
+    const lengthReviws = reviews.length;
+    setReview(reviw === lengthReviws - 1 ? 0 : reviw + 1);
+  }
+
   return (
     <div className={style.contentAll} id="about" ref={aboutRef}>
       <div className={style.barra}></div>
@@ -32,11 +63,25 @@ export default function About({ receiveDataAbout }) {
         ¡Únete a nosotros y maximiza tus oportunidades laborales hoy mismo!
       </p>
       <h4>Algunas recomendaciones de nuestos clientes en linkedin</h4>
-      <div className={style.contentReviws}>
-        <CardReview />
-        <CardReview />
-        <CardReview />
-      </div>
+      {window.innerWidth < 970 ? (
+        <div className={style.contentReviws}>
+          <IoIosArrowBack
+            size="40"
+            className={style.arrow}
+            onClick={() => changuePlanLeft()}
+          />
+          {reviews[reviw]}
+          <IoIosArrowForward
+            size="40"
+            className={style.arrow}
+            onClick={() => changuePlanRight()}
+          />
+        </div>
+      ) : (
+        <div className={style.contentReviws}>
+          {reviews.map((element) => element)}
+        </div>
+      )}
     </div>
   );
 }
