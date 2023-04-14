@@ -40,6 +40,10 @@
 }
 
 @media (max-width: 700px) {
+  .contentAll {
+    padding: 0;
+  }
+
   .subtitle {
     color: #444;
     margin: 0;
@@ -48,14 +52,18 @@
     margin-bottom: 2rem;
   }
 
-  .contentCardPlans {
+  .contentCardPlansMobile {
     width: 100%;
     height: max-content;
-    padding: 2rem 8rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    overflow-y: scroll;
+    align-items: center;
     gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 200px;
   }
 }
