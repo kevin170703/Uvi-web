@@ -2,14 +2,14 @@ import React from "react";
 import style from "./CardPlan.module.css";
 import { Link } from "react-scroll";
 
-export default function CardPlans({ popular }) {
+export default function CardPlans({ popular, price, title }) {
   return (
     <div className={popular ? style.contentAllPopular : style.contentAll}>
       <div className={popular ? style.priceTitlePopular : style.priceTitle}>
-        <h6>Titulo</h6>
+        <h6>{title}</h6>
 
         <p className={popular ? style.pricePopular : style.price}>
-          26$
+          {price}
           <span>/mes</span>
         </p>
       </div>
