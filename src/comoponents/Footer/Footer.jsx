@@ -14,9 +14,13 @@ export default function Footer() {
             href="https://www.linkedin.com/company/universo-i/"
             target="_blank"
           >
-            <TiSocialLinkedinCircular size="35" className={style.logos} />
+            <TiSocialLinkedinCircular size="40" className={style.logos} />
           </a>
-          <a href="">
+          <p>
+            {/* <TiMail size="40" className={style.logos} /> */}
+            info@uvi.com.ar
+          </p>
+          <a href="mailto:info@uvi.com.ar" target="_blank">
             <TiMail size="40" className={style.logos} />
           </a>
         </div>
