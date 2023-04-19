@@ -11,7 +11,8 @@
 .contentForm {
   display: flex;
   max-width: 1000px;
-  gap: 15rem;
+  min-width: 500px;
+  gap: 20%;
   padding: 5rem;
   align-items: center;
   background-color: #fafafa;
@@ -40,8 +41,8 @@
 }
 
 .contentForm img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
 }
 
 .contentImgInfo {
@@ -136,6 +137,38 @@
   border-radius: 20px;
   border: none;
   margin-top: 1rem;
+}
+
+/* @media (max-width: 1200px) {
+  .contentForm {
+    gap: 5rem;
+  }
+} */
+
+@media (max-width: 1000px) {
+  .contentImgInfo {
+    display: none;
+  }
+  .contentForm form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 1rem 0;
+  }
+  .contentTitle h6 {
+    font-size: 1.8rem;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contentTitle p {
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {
