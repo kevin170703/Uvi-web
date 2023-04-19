@@ -14,7 +14,7 @@
 }
 
 .contentInfo {
-  width: 100%;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
 
 .contentInfo h6 {
   font-size: 1.2rem;
-  width: 550px;
+  width: 100%;
   margin: 0;
   font-weight: 100;
   color: #fff;
@@ -73,7 +73,16 @@
 }
 
 .fondo {
-  width: 500px;
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .contentAll {
+    background: url("../../assets/backgroud-home-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0 5rem;
+  }
 }
 
 @media (max-width: 700px) {
