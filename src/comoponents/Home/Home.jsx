@@ -2,6 +2,7 @@ import React from "react";
 import style from "./Home.module.css";
 import { Link } from "react-scroll";
 import logo from "../../assets/logo2.png";
+import fondo from "../../assets/imageHome.svg";
 
 export default function Home() {
   return (
@@ -13,19 +14,32 @@ export default function Home() {
           Potencia tu carrera profesional con nuestros servicios de
           asesoramiento y herramientas de búsqueda de empleo
         </h6>
-        <Link
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={50}
-          duration={500}
-          className={style.buttonGo}
-        >
-          Saber mas
-        </Link>
+        <div className={style.contentButtons}>
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            className={style.buttonServices}
+          >
+            Servicios
+          </Link>
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            className={style.buttonAbout}
+          >
+            Nosotros
+          </Link>
+        </div>
       </div>
-      {/* <img src={fondo} alt="" className={style.fondo} /> */}
+      <img src={fondo} alt="" className={style.fondo} />
     </div>
   );
 }
