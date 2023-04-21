@@ -1,12 +1,22 @@
 .contentAll {
-  background-image: url("../../assets/background-home.svg");
-  background-size: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  z-index: 1;
   display: flex;
-  padding: 0 10%;
+  justify-content: flex-end;
   height: 100vh;
   max-width: 100%;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.backgroundVideo {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
 }
 
 .title {
@@ -14,18 +24,20 @@
 }
 
 .contentInfo {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
 }
 
 .contentInfo h6 {
   font-size: 1.2rem;
-  width: 100%;
+  width: 40%;
   margin: 0;
+  text-align: center;
   font-weight: 100;
   color: #fff;
 }
@@ -78,7 +90,7 @@
 
 @media (max-width: 1200px) {
   .contentAll {
-    background: url("../../assets/backgroud-home-mobile.svg");
+    background: url("../../assets/background-home-mid.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 0 5rem;
@@ -87,51 +99,50 @@
 
 @media (max-width: 700px) {
   .contentAll {
-    background: url("../../assets/backgroud-home-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
     justify-content: center;
+    align-items: flex-end;
     padding: 0;
     width: 100vw;
     overflow: hidden;
   }
 
   .title {
-    width: 150px;
+    display: none;
   }
 
   .contentInfo {
     display: flex;
     align-items: center;
-    padding: 0 3rem;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    height: 30vh;
   }
 
   .contentInfo h6 {
     font-size: 1rem;
     text-align: center;
-    width: 100%;
+    width: 80%;
     margin: 0;
     font-weight: 100;
     color: #fff;
   }
 
   .contentButtons {
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 0;
+    gap: 5%;
     margin-top: 1rem;
   }
 
   .buttonServices {
-    width: 140px;
-    font-size: 1.6rem;
     text-align: center;
+    margin: 0;
   }
 
   .buttonAbout {
-    width: 100px;
+    margin: 0;
   }
 
   .fondo {
