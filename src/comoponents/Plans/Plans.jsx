@@ -7,9 +7,9 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 export default function Plans() {
   const [card, setCard] = useState(0);
   let plans = [
-    <CardPlan price={"30"} title="Title1" />,
-    <CardPlan popular={true} price={"50"} title="Title2" />,
-    <CardPlan price={"10"} title="Title3" />,
+    <CardPlan price={"30"} title="Title1" key={1} />,
+    <CardPlan popular={true} price={"50"} title="Title2" key={2} />,
+    <CardPlan price={"10"} title="Title3" key={3} />,
   ];
 
   function changuePlanLeft() {
