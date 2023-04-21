@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./Home.module.css";
 import { Link } from "react-scroll";
-import logo from "../../assets/logo2.png";
 import backgroundHome from "../../assets/background-home.png";
 import backgroundHomeMovile from "../../assets/backgroud-home-mobile.png";
 import backgroundVideo from "../../assets/video-home.mp4";
@@ -20,7 +19,6 @@ export default function Home() {
       </video>
 
       <div className={style.contentInfo}>
-        {/* <img src={logo} alt="" className={style.title} /> */}
         <h6>
           Potencia tu carrera profesional con nuestros servicios de
           asesoramiento y herramientas de búsqueda de empleo
@@ -50,7 +48,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      {/* <img src={fondo} alt="" className={style.fondo} /> */}
     </div>
   );
 }
