@@ -47,7 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 10%;
 }
 
 .buttonServices {
@@ -88,15 +88,6 @@
   width: 50%;
 }
 
-@media (max-width: 1200px) {
-  .contentAll {
-    background: url("../../assets/background-home-mid.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 0 5rem;
-  }
-}
-
 @media (max-width: 700px) {
   .contentAll {
     justify-content: center;
@@ -104,6 +95,12 @@
     padding: 0;
     width: 100vw;
     overflow: hidden;
+  }
+
+  .backgroundVideo {
+    position: static;
+    z-index: 0;
+    height: 100%;
   }
 
   .title {
@@ -117,6 +114,7 @@
     padding: 0;
     width: 100%;
     height: 30vh;
+    position: absolute;
   }
 
   .contentInfo h6 {

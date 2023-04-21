@@ -3,16 +3,22 @@ import style from "./Home.module.css";
 import { Link } from "react-scroll";
 import backgroundHome from "../../assets/background-home.png";
 import backgroundHomeMovile from "../../assets/backgroud-home-mobile.png";
+import backgroundHomeMid from "../../assets/background-home-mid.png";
+
 import backgroundVideo from "../../assets/video-home.mp4";
 
 export default function Home() {
   return (
     <div className={style.contentAll} id="home">
-      <img
-        src={window.innerWidth < 700 ? backgroundHomeMovile : backgroundHome}
-        alt=""
-        className={style.background}
-      />
+      {innerWidth > 1200 && (
+        <img src={backgroundHome} alt="" className={style.background} />
+      )}
+      {innerWidth < 1300 && (
+        <img src={backgroundHomeMid} alt="" className={style.background} />
+      )}
+      {innerWidth < 700 && (
+        <img src={backgroundHomeMovile} alt="" className={style.background} />
+      )}
 
       <video autoPlay muted loop className={style.backgroundVideo}>
         <source src={backgroundVideo} type="video/mp4" />
@@ -26,7 +32,7 @@ export default function Home() {
         <div className={style.contentButtons}>
           <Link
             activeClass="active"
-            to="about"
+            to="services"
             spy={true}
             smooth={true}
             offset={50}
