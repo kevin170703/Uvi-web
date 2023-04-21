@@ -27,16 +27,19 @@ export default function About({ receiveDataAbout }) {
         "Muy buen servicio, me ayudo a conseguir mi primer trabajo luego de la revision de mi CV."
       }
       nameUser={"kevin correa"}
+      key={1}
     />,
     <CardReview
       reviewText={"Muy buen servicio, me ayudo a conseguir mi primer trabajo."}
       nameUser={"Uvi-user"}
+      key={2}
     />,
     <CardReview
       reviewText={
         "Me ayudo a conseguir mi primer trabajo luego de la revision de mi CV."
       }
       nameUser={"Uvi-user02"}
+      key={3}
     />,
   ];
 
