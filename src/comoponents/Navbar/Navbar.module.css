@@ -98,9 +98,14 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    position: absolute;
   }
 
-  .contentAllFixed {
+  .contentAllFixed .contentLinks {
+    display: flex;
+  }
+
+  .contentAllFixed .buttonMenu {
     display: none;
   }
 }

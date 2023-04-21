@@ -58,6 +58,21 @@ export default function Navbar({ dataAboutPosition }) {
         />
         <Link
           activeClass="active"
+          to="services"
+          spy={true}
+          smooth={true}
+          offset={20}
+          duration={500}
+          className={style.links}
+          // style={
+          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
+          // }
+        >
+          Servicios
+        </Link>
+
+        <Link
+          activeClass="active"
           to="about"
           spy={true}
           smooth={true}
@@ -68,7 +83,7 @@ export default function Navbar({ dataAboutPosition }) {
           //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
           // }
         >
-          Sobre nosotros
+          Nosotros
         </Link>
 
         <Link
@@ -99,7 +114,7 @@ export default function Navbar({ dataAboutPosition }) {
         >
           Contactanos
         </Link>
-        <Link
+        {/* <Link
           activeClass="active"
           to="contacts"
           spy={true}
@@ -112,7 +127,7 @@ export default function Navbar({ dataAboutPosition }) {
           // }
         >
           Contactos
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
