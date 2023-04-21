@@ -1,10 +1,10 @@
 .contentAll {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   background-color: transparent;
   align-items: center;
   width: 80%;
-  padding: 0 8% 0 12%;
+  padding: 0 10%;
   height: 100px;
   position: absolute;
   z-index: 100;
@@ -57,9 +57,11 @@
 }
 
 .contentLogo {
-  width: 45%;
+  width: 80%;
+  position: absolute;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  padding: 0;
 }
 
 @media (max-width: 700px) {
