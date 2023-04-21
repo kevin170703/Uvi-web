@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./Navbar.module.css";
 import logo from "../../assets/logo1.png";
+import logo2 from "../../assets/logo2.png";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
@@ -19,17 +20,33 @@ export default function Navbar({ dataAboutPosition }) {
         className={vistPhone ? style.buttonMenuNone : style.buttonMenu}
         onClick={() => setVistPhone(true)}
       />
-      <Link
-        activeClass="active"
-        to="home"
-        spy={true}
-        smooth={true}
-        offset={0}
-        duration={500}
-        className={style.links}
-      >
-        <img src={logo} alt="" />
-      </Link>
+      {dataAboutPosition < 100 ? (
+        <Link
+          activeClass="active"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          className={style.links}
+        >
+          <img src={logo2} alt="" />
+        </Link>
+      ) : (
+        <div className={style.contentLogo}>
+          <Link
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className={style.links}
+          >
+            <img src={logo} alt="" />
+          </Link>
+        </div>
+      )}
 
       <div className={vistPhone ? style.contentLinksPhone : style.contentLinks}>
         <IoClose
@@ -47,9 +64,9 @@ export default function Navbar({ dataAboutPosition }) {
           offset={20}
           duration={500}
           className={style.links}
-          style={
-            dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          }
+          // style={
+          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
+          // }
         >
           Sobre nosotros
         </Link>
@@ -62,9 +79,9 @@ export default function Navbar({ dataAboutPosition }) {
           offset={0}
           duration={500}
           className={style.links}
-          style={
-            dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          }
+          // style={
+          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
+          // }
         >
           Planes
         </Link>
@@ -76,9 +93,9 @@ export default function Navbar({ dataAboutPosition }) {
           offset={50}
           duration={500}
           className={style.links}
-          style={
-            dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          }
+          // style={
+          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
+          // }
         >
           Contactanos
         </Link>
@@ -90,9 +107,9 @@ export default function Navbar({ dataAboutPosition }) {
           offset={0}
           duration={500}
           className={style.links}
-          style={
-            dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          }
+          // style={
+          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
+          // }
         >
           Contactos
         </Link>

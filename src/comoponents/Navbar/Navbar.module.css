@@ -1,12 +1,13 @@
 .contentAll {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: transparent;
   align-items: center;
   width: 80%;
-  padding: 0 10%;
+  padding: 0 8% 0 12%;
   height: 100px;
   position: absolute;
+  z-index: 100;
 }
 
 .buttonMenuNone,
@@ -18,10 +19,10 @@
 .contentAllFixed {
   display: flex;
   justify-content: space-between;
-  background-color: #fafafa;
+  background-color: #9c31f6;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   align-items: center;
-  color: #222;
+  color: #fafafa;
   width: 80%;
   height: 80px;
   padding: 0 10%;
@@ -51,8 +52,14 @@
 
 .links {
   text-decoration: none;
-  color: #222;
+  color: #fafafa;
   cursor: pointer;
+}
+
+.contentLogo {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 700px) {
