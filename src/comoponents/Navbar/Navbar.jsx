@@ -8,12 +8,17 @@ import { IoClose } from "react-icons/io5";
 
 export default function Navbar({ dataAboutPosition }) {
   const [vistPhone, setVistPhone] = useState(false);
+
+  if (vistPhone === true && dataAboutPosition < 100) setVistPhone(false);
+
   return (
     <div
       className={
-        dataAboutPosition < 100 ? style.contentAllFixed : style.contentAll
+        dataAboutPosition < 100 && vistPhone === false
+          ? style.contentAllFixed
+          : style.contentAll
       }
-      style={vistPhone ? { height: "100vh" } : {}}
+      style={vistPhone ? { height: "100vh", width: "100vw" } : {}}
     >
       <FiMenu
         size="30"
@@ -30,7 +35,7 @@ export default function Navbar({ dataAboutPosition }) {
           duration={500}
           className={style.links}
         >
-          <img src={logo2} alt="" />
+          <img src={logo2} alt="" className={style.logo} />
         </Link>
       ) : (
         <div className={style.contentLogo}>
@@ -43,7 +48,7 @@ export default function Navbar({ dataAboutPosition }) {
             duration={500}
             className={style.links}
           >
-            <img src={logo} alt="" />
+            <img src={logo} alt="" className={style.logo} />
           </Link>
         </div>
       )}
@@ -58,12 +63,25 @@ export default function Navbar({ dataAboutPosition }) {
         />
         <Link
           activeClass="active"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onClick={() => setVistPhone(false)}
+        >
+          <img src={logo2} alt="" className={style.logoMovile} />
+        </Link>
+        <Link
+          activeClass="active"
           to="services"
           spy={true}
           smooth={true}
           offset={20}
           duration={500}
           className={style.links}
+          onClick={() => setVistPhone(false)}
+
           // style={
           //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
           // }
@@ -79,6 +97,8 @@ export default function Navbar({ dataAboutPosition }) {
           offset={20}
           duration={500}
           className={style.links}
+          onClick={() => setVistPhone(false)}
+
           // style={
           //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
           // }
@@ -94,6 +114,8 @@ export default function Navbar({ dataAboutPosition }) {
           offset={0}
           duration={500}
           className={style.links}
+          onClick={() => setVistPhone(false)}
+
           // style={
           //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
           // }
@@ -108,26 +130,14 @@ export default function Navbar({ dataAboutPosition }) {
           offset={50}
           duration={500}
           className={style.links}
+          onClick={() => setVistPhone(false)}
+
           // style={
           //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
           // }
         >
-          Contactanos
+          Contacto
         </Link>
-        {/* <Link
-          activeClass="active"
-          to="contacts"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          className={style.links}
-          // style={
-          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          // }
-        >
-          Contactos
-        </Link> */}
       </div>
     </div>
   );
