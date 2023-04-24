@@ -58,6 +58,12 @@
   text-decoration: none;
   color: #fafafa;
   cursor: pointer;
+  z-index: 100;
+  transition: 0.2s linear;
+}
+
+.links:hover {
+  transform: translateY(-5px) scale(1.05);
 }
 
 .contentLogo {
