@@ -30,10 +30,11 @@ export default function Home() {
           className={style.background}
         />
       ) : null}
-
-      <video autoPlay muted loop className={style.backgroundVideo}>
-        <source src={backgroundVideo} type="video/mp4" />
-      </video>
+      <div className={style.backgroundVideo}>
+        <video autoPlay muted loop>
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+      </div>
 
       <div className={style.contentInfo}>
         <h6>
