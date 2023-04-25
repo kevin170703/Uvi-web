@@ -5,8 +5,11 @@ import backgroundHome from "../../assets/background-home.png";
 import backgroundHomeMovile from "../../assets/backgroud-home-mobile.png";
 import backgroundHomeMid from "../../assets/background-home-mid.png";
 import backgroundHomeMovileLow from "../../assets/background-movil-low.png";
-
 import backgroundVideo from "../../assets/video-home-extendido2.mp4";
+
+import cardCV from "../../assets/cardCV.png";
+import cardLinkedin from "../../assets/cardLinkedin.png";
+import cardInterview from "../../assets/cardInterview.png";
 
 export default function Home() {
   return (
@@ -30,10 +33,22 @@ export default function Home() {
           className={style.background}
         />
       ) : null}
-      <div className={style.backgroundVideo}>
-        <video autoPlay muted loop>
-          <source src={backgroundVideo} type="video/mp4" />
-        </video>
+      <div className={style.contentSlider}>
+        <div className={style.backgroundVideo}>
+          <video autoPlay muted loop>
+            <source src={backgroundVideo} type="video/mp4" />
+          </video>
+
+          <div className={style.contentImages}>
+            <img src={cardCV} alt="" />
+          </div>
+          <div className={style.contentImages}>
+            <img src={cardLinkedin} alt="" />
+          </div>
+          <div className={style.contentImages}>
+            <img src={cardInterview} alt="" />
+          </div>
+        </div>
       </div>
 
       <div className={style.contentInfo}>
