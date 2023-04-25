@@ -6,7 +6,7 @@ import backgroundHomeMovile from "../../assets/backgroud-home-mobile.png";
 import backgroundHomeMid from "../../assets/background-home-mid.png";
 import backgroundHomeMovileLow from "../../assets/background-movil-low.png";
 
-import backgroundVideo from "../../assets/video-home-extendido.mp4";
+import backgroundVideo from "../../assets/video-home-extendido2.mp4";
 
 export default function Home() {
   return (
