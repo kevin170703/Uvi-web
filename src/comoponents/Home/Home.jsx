@@ -5,11 +5,13 @@ import backgroundHome from "../../assets/background-home.png";
 import backgroundHomeMovile from "../../assets/backgroud-home-mobile.png";
 import backgroundHomeMid from "../../assets/background-home-mid.png";
 import backgroundHomeMovileLow from "../../assets/background-movil-low.png";
-import backgroundVideo from "../../assets/video-home-extendido2.mp4";
+import backgroundVideo from "../../assets/video-home.mp4";
 
 import cardCV from "../../assets/cardCV.png";
 import cardLinkedin from "../../assets/cardLinkedin.png";
 import cardInterview from "../../assets/cardInterview.png";
+
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -33,28 +35,63 @@ export default function Home() {
           className={style.background}
         />
       ) : null}
-      <div className={style.contentSlider}>
-        <div className={style.backgroundVideo}>
-          <video autoPlay muted loop>
-            <source src={backgroundVideo} type="video/mp4" />
-          </video>
-
-          <div className={style.contentImages}>
+      {innerWidth > 700 ? (
+        <div className={style.contentSlider}>
+          <motion.div
+            className={style.contentImages}
+            initial={{ x: "100%" }}
+            animate={{ x: [null, "0%", "0%", "0%", "100%"] }}
+            transition={{
+              delay: 2,
+              duration: 5,
+              repeatType: "reverse",
+              repeat: Infinity,
+              repeatDelay: 12,
+            }}
+          >
             <img src={cardCV} alt="" />
-          </div>
-          <div className={style.contentImages}>
+          </motion.div>
+          <motion.div
+            className={style.contentImages}
+            initial={{ x: "100%" }}
+            animate={{ x: [null, "0%", "0%", "0%", "100%"] }}
+            transition={{
+              delay: 7,
+              duration: 5,
+              repeatType: "reverse",
+              repeat: Infinity,
+              repeatDelay: 12,
+            }}
+          >
             <img src={cardLinkedin} alt="" />
-          </div>
-          <div className={style.contentImages}>
+          </motion.div>
+          <motion.div
+            className={style.contentImages}
+            initial={{ x: "100%" }}
+            animate={{ x: [null, "0%", "0%", "0%", "100%"] }}
+            transition={{
+              delay: 12,
+              duration: 5,
+              repeatType: "reverse",
+              repeat: Infinity,
+              repeatDelay: 12,
+            }}
+          >
             <img src={cardInterview} alt="" />
-          </div>
+          </motion.div>
         </div>
+      ) : null}
+
+      <div className={style.backgroundVideo}>
+        <video autoPlay muted loop>
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
       </div>
 
       <div className={style.contentInfo}>
         <h6>
-          Potencia tu carrera profesional con nuestros servicios de
-          asesoramiento y herramientas de búsqueda de empleo
+          Potencia tu búsqueda laboral con nuestros servicios de asesoramiento y
+          herramientas de búsqueda de empleo
         </h6>
         <div className={style.contentButtons}>
           <Link
