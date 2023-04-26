@@ -65,6 +65,19 @@
   color: #444;
 }
 
+.contentInputs textarea,
+.contentInputFile textarea {
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.contentInputs textarea:focus,
+.contentInputFile textarea:focus {
+  outline: 1px solid #7721bf;
+  box-shadow: 2px 2px 10px rgba(119, 33, 191, 0.2);
+}
+
 .contentInputs input {
   background-color: transparent;
   border: 1px solid #ccc;
@@ -137,6 +150,10 @@
   border-radius: 20px;
   border: none;
   margin-top: 1rem;
+}
+
+.networks {
+  color: #7721bf;
 }
 
 /* @media (max-width: 1200px) {

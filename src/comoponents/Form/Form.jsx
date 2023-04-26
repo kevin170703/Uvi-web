@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Form.module.css";
 import logo from "../../assets/logo1.png";
+import { TiSocialLinkedinCircular, TiMail } from "react-icons/ti";
 
 export default function Form() {
   return (
@@ -9,15 +10,23 @@ export default function Form() {
         <form action="">
           <div className={style.contentTitle}>
             {/* <div className={style.barra}></div> */}
-            <h6 className={style.title}>Contactanos</h6>
+            <h6 className={style.title}>Contacto</h6>
             <p>
-              Solicita nuestros servicios, completando nuestro formulario, ¡es
-              rápido y fácil!. ¡Haz el primer paso hacia el éxito hoy mismo!
+              Ante cualquier consulta o duda puedes enviarnos un mensaje, nos
+              comunicaremos a la brevedad.
             </p>
           </div>
           <div className={style.contentInputs}>
             {/* <label htmlFor="name">Nombre</label> */}
             <input type="text" name="name" id="name" placeholder="Nombre" />
+          </div>
+          <div className={style.contentInputs}>
+            {/* <label htmlFor="name">Corro electronico</label> */}
+            <input type="text" name="name" id="name" placeholder="Apellido" />
+          </div>
+          <div className={style.contentInputs}>
+            {/* <label htmlFor="name">Telefono</label> */}
+            <input type="text" name="name" id="name" placeholder="Telefono" />
           </div>
           <div className={style.contentInputs}>
             {/* <label htmlFor="name">Corro electronico</label> */}
@@ -29,31 +38,20 @@ export default function Form() {
             />
           </div>
           <div className={style.contentInputs}>
-            {/* <label htmlFor="name">Telefono</label> */}
-            <input type="text" name="name" id="name" placeholder="Telefono" />
+            <label placeholder="Mensaje">Mensaje</label>
+            <textarea name="" id="" cols="10" rows="5"></textarea>
           </div>
-          <div className={style.contentInputs}>
-            <select>
-              <option value="">Seleccione un plan</option>
-              <option value="">Plan 1</option>
-              <option value="">Plan 2</option>
-              <option value="">Plan 3</option>
-            </select>
-            {/* <label htmlFor="name">plan</label> */}
-            {/* <input type="text" name="name" id="name" placeholder="Plan" /> */}
-          </div>
-          <div className={style.contentInputFile}>
-            <label htmlFor="file">Archivo adjunto</label>
-            <input type="file" name="file" id="file" />
-          </div>
+
           <button type="submit">Enviar</button>
         </form>
         <div className={style.contentImgInfo}>
           <img src={logo} alt="" />
-          <p>
-            Potencia tu carrera profesional con nuestros servicios de
-            asesoramiento y herramientas de búsqueda de empleo
-          </p>
+          <a
+            href="https://www.linkedin.com/company/universo-i/"
+            target="_blank"
+          >
+            <TiSocialLinkedinCircular size="50" className={style.networks} />
+          </a>
         </div>
       </div>
     </div>
