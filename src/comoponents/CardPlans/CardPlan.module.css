@@ -2,13 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 0 0 2rem;
-  width: 230px;
-  height: 450px;
+  padding: 0 1rem;
+  width: 300px;
+  height: 150px;
   border: 1px solid #eee;
   border-radius: 15px;
   background-color: #fafafa;
   transition: 0.3s ease-in-out;
+  row-gap: 2rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contentAll[data-isOpen="true"] {
+  height: 800px;
 }
 
 .contentAll:hover {
@@ -16,13 +23,19 @@
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
 }
 
+.descriiption {
+  font-size: 0.9rem;
+}
+
 .priceTitle {
   margin-top: 2rem;
 }
 
 .priceTitle h6 {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   margin: 0;
+  margin-left: 10px;
+  text-align: center;
 }
 
 .price {
@@ -39,35 +52,51 @@
   color: #aaa;
 }
 
-.contentAll ul {
-  font-size: 1.3rem;
-  margin: 2rem 0;
-  padding: 0;
-  list-style: none;
+.contentButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: max-content;
 }
 
-.contentAll li {
-  margin-bottom: 1rem;
-}
-
-.contentAll li {
-  padding-left: 2rem;
-  background-image: url("../../assets/checked-black.png");
-  background-position: 0 50%;
-  background-size: 1.3rem 1.3rem;
-  background-repeat: no-repeat;
-}
-
-.contentAll a {
+.buttonViewMore {
   background-color: #fff;
   border: 1px solid #7721bf;
   color: #7721bf;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  width: 140px;
+  width: 100px;
   text-align: center;
+}
+
+.buttonBuy {
+  background-color: #7721bf;
+  border: none;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+
+.contentAll h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.contentAll li {
+  text-align: start;
+  font-size: 0.9rem;
+}
+
+.dataExtra {
+  text-align: start;
 }
 
 /* ---------------------- */
@@ -76,9 +105,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 0 0 2rem;
-  width: 230px;
-  height: 450px;
+  padding: 0 1rem;
+  width: 300px;
+  height: 150px;
+  row-gap: 2rem;
   box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   background: rgb(119, 33, 191);
@@ -87,12 +117,23 @@
     rgba(119, 33, 191, 0.8491771708683473) 0%,
     rgba(119, 33, 191, 1) 100%
   );
+  color: #fff;
+  text-align: center;
   transition: 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .contentAllPopular:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contentAllPopular[data-isOpen="true"] {
+  height: 800px;
+}
+
+.contentAllPopular li {
+  text-align: start;
 }
 
 .priceTitlePopular {
@@ -101,8 +142,10 @@
 }
 
 .priceTitlePopular h6 {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   margin: 0;
+  margin-left: 10px;
+  text-align: center;
 }
 
 .pricePopular {
@@ -117,38 +160,4 @@
   font-size: 1rem;
   margin: 0;
   color: #aaa;
-}
-
-.contentAllPopular ul {
-  font-size: 1.3rem;
-  margin: 2rem 0;
-  color: #fff;
-  padding: 0;
-
-  list-style: none;
-}
-
-.contentAllPopular li {
-  margin-bottom: 1rem;
-}
-
-.contentAllPopular li {
-  padding-left: 2rem;
-  background-image: url("../../assets/checked-wihte.png");
-  background-position: 0 50%;
-  background-size: 1.3rem 1.3rem;
-  background-repeat: no-repeat;
-}
-
-.contentAllPopular a {
-  background-color: #7721bf;
-  border: 1px solid #fff;
-
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  width: 140px;
-  text-align: center;
 }
