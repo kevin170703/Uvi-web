@@ -7,9 +7,40 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 export default function Plans() {
   const [card, setCard] = useState(0);
   let plans = [
-    <CardPlan price={"30"} title="Title1" key={1} />,
-    <CardPlan popular={true} price={"50"} title="Title2" key={2} />,
-    <CardPlan price={"10"} title="Title3" key={3} />,
+    <CardPlan
+      price={"$ARS: 1600"}
+      title="Revisión o creación de  Linkedin"
+      key={1}
+      characteristics={
+        "Una devolución por escrito de cómo se encuentra su perfil de linkedin. Un análisis general con feedback, dándote tips y consejos de lo que se puede mejorar. Creación de perfil de linkedin desde cero, en el caso de no tener aún una cuenta. Guía de consejos generales de búsqueda de empleo."
+      }
+      deliveryTime={
+        "Este servicio se realizará dentro de los 3 días hábiles posteriores a la compra."
+      }
+    />,
+    <CardPlan
+      popular={true}
+      price={"$ARS: 2500"}
+      title="Asesorías para entrevistas (personalizadas)"
+      key={2}
+      characteristics={
+        "incluye un resumen de los puntos centrales hablados en la asesoría y consejos para las entrevistas. Ideal para aquellas personas que no logran superar con éxito la etapa de la entrevista para un puesto de trabajo."
+      }
+      deliveryTime={
+        "La asesoría queda sujeta a fechas disponibles una vez realizado el pago de la misma."
+      }
+    />,
+    <CardPlan
+      price={"$ARS: 2000"}
+      title=" Corrección o Confección de CV"
+      key={3}
+      characteristics={
+        "Diseño de tu currículum pensado desde un perfil específico adaptado a esa posición. Incluye Carta de Presentación y correo de solicitud de trabajo. Se entrega un PDF para impresión. Y un link donde te aparecerá la plantilla de tu CV para que puedas editarlo la veces que necesites.Guía de consejos generales de búsqueda de empleo. En caso de solicitar este servicio de manera urgente, se abonará un adicional en función del pedido. Ideal para aquellas personas que tienen dudas sobre cómo está elaborado su currículum."
+      }
+      deliveryTime={
+        "Este servicio se realizará dentro de los 6 días hábiles posteriores a la compra."
+      }
+    />,
   ];
 
   function changuePlanLeft() {
@@ -25,7 +56,7 @@ export default function Plans() {
   return (
     <div className={style.contentAll} id="plans">
       <div className={style.barra}></div>
-      <h3>Planes</h3>
+      <h3>Servicios</h3>
       <p className={style.subtitle}>Elige tu plan favorito</p>
       {window.innerWidth < 700 ? (
         <div className={style.contentCardPlansMobile}>
