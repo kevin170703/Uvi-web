@@ -6,6 +6,7 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 export default function Plans() {
   const [card, setCard] = useState(0);
+
   let plans = [
     <CardPlan
       price={"$ARS: 1600"}
