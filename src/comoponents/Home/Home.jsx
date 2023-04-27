@@ -1,21 +1,24 @@
 import React from "react";
 import style from "./Home.module.css";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+
+//backgrounds
 import backgroundHome from "../../assets/background-home.png";
 import backgroundHomeMovile from "../../assets/backgroud-home-mobile.png";
 import backgroundHomeMid from "../../assets/background-home-mid.png";
 import backgroundHomeMovileLow from "../../assets/background-movil-low.png";
 import backgroundVideo from "../../assets/video-home.mp4";
+//backgrounds
 
+//Cards of slider
 import cardCV from "../../assets/cardCV.png";
 import cardLinkedin from "../../assets/cardLinkedin.png";
 import cardInterview from "../../assets/cardInterview.png";
-
 import cardCVMovile from "../../assets/cardCVMovile.png";
 import cardLinkedinMovile from "../../assets/CardLinkedinMovil.png";
 import cardInterviewMovile from "../../assets/CardInterviewMovil.png";
-
-import { motion } from "framer-motion";
+//Cards of slider
 
 export default function Home() {
   let background = backgroundHome;
