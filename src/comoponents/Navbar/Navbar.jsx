@@ -81,10 +81,6 @@ export default function Navbar({ dataAboutPosition }) {
           duration={500}
           className={style.links}
           onClick={() => setVistPhone(false)}
-
-          // style={
-          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          // }
         >
           Servicios
         </Link>
@@ -98,10 +94,6 @@ export default function Navbar({ dataAboutPosition }) {
           duration={500}
           className={style.links}
           onClick={() => setVistPhone(false)}
-
-          // style={
-          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          // }
         >
           Nosotros
         </Link>
@@ -115,10 +107,6 @@ export default function Navbar({ dataAboutPosition }) {
           duration={500}
           className={style.links}
           onClick={() => setVistPhone(false)}
-
-          // style={
-          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          // }
         >
           Planes
         </Link>
@@ -131,10 +119,6 @@ export default function Navbar({ dataAboutPosition }) {
           duration={500}
           className={style.links}
           onClick={() => setVistPhone(false)}
-
-          // style={
-          //   dataAboutPosition < 100 ? { color: "#000" } : { color: "#fff" }
-          // }
         >
           Contacto
         </Link>
