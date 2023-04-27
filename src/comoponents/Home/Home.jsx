@@ -18,24 +18,18 @@ import cardInterviewMovile from "../../assets/CardInterviewMovil.png";
 import { motion } from "framer-motion";
 
 export default function Home() {
+  let background = backgroundHome;
+  if (innerWidth > 1200) background = backgroundHome;
+  else if (innerWidth <= 1200 && innerWidth > 700)
+    background = backgroundHomeMid;
+  else if (innerWidth <= 700 && innerWidth > 400)
+    background = backgroundHomeMovile;
+  else if (innerWidth <= 400) background = backgroundHomeMovileLow;
+
   return (
     <div className={style.contentAll} id="home">
-      {innerWidth > 1200 ? (
-        <img src={backgroundHome} alt="" className={style.background} />
-      ) : null}
-      {innerWidth <= 1200 && innerWidth > 700 ? (
-        <img src={backgroundHomeMid} alt="" className={style.background} />
-      ) : null}
-      {innerWidth <= 700 && innerWidth > 400 ? (
-        <img src={backgroundHomeMovile} alt="" className={style.background} />
-      ) : null}
-      {innerWidth <= 400 ? (
-        <img
-          src={backgroundHomeMovileLow}
-          alt=""
-          className={style.background}
-        />
-      ) : null}
+      <img src={background} alt="" className={style.background} />
+
       {innerWidth > 700 ? (
         <div className={style.contentSlider}>
           <motion.div

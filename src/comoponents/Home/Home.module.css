@@ -175,12 +175,11 @@
   .contentSlider {
     left: 30%;
     width: 70%;
-    /* overflow: visible; */
     height: 100vh;
   }
 
   .contentImages img {
-    width: 200px;
+    width: 250px;
   }
 
   .backgroundVideo {
