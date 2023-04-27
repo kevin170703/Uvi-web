@@ -176,11 +176,11 @@
     left: 30%;
     width: 70%;
     /* overflow: visible; */
-    height: 75vh;
+    height: 100vh;
   }
 
   .contentImages img {
-    width: 300px;
+    width: 200px;
   }
 
   .backgroundVideo {

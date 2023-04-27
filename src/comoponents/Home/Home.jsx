@@ -11,6 +11,10 @@ import cardCV from "../../assets/cardCV.png";
 import cardLinkedin from "../../assets/cardLinkedin.png";
 import cardInterview from "../../assets/cardInterview.png";
 
+import cardCVMovile from "../../assets/cardCVMovile.png";
+import cardLinkedinMovile from "../../assets/CardLinkedinMovil.png";
+import cardInterviewMovile from "../../assets/CardInterviewMovil.png";
+
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -19,15 +23,12 @@ export default function Home() {
       {innerWidth > 1200 ? (
         <img src={backgroundHome} alt="" className={style.background} />
       ) : null}
-
       {innerWidth <= 1200 && innerWidth > 700 ? (
         <img src={backgroundHomeMid} alt="" className={style.background} />
       ) : null}
-
       {innerWidth <= 700 && innerWidth > 400 ? (
         <img src={backgroundHomeMovile} alt="" className={style.background} />
       ) : null}
-
       {innerWidth <= 400 ? (
         <img
           src={backgroundHomeMovileLow}
@@ -80,7 +81,52 @@ export default function Home() {
             <img src={cardInterview} alt="" />
           </motion.div>
         </div>
-      ) : null}
+      ) : (
+        <div className={style.contentSlider}>
+          <motion.div
+            className={style.contentImages}
+            initial={{ x: "100%" }}
+            animate={{ x: [null, "0%", "0%", "0%", "100%"] }}
+            transition={{
+              delay: 2,
+              duration: 5,
+              repeatType: "reverse",
+              repeat: Infinity,
+              repeatDelay: 12,
+            }}
+          >
+            <img src={cardCVMovile} alt="" />
+          </motion.div>
+          <motion.div
+            className={style.contentImages}
+            initial={{ x: "100%" }}
+            animate={{ x: [null, "0%", "0%", "0%", "100%"] }}
+            transition={{
+              delay: 7,
+              duration: 5,
+              repeatType: "reverse",
+              repeat: Infinity,
+              repeatDelay: 12,
+            }}
+          >
+            <img src={cardLinkedinMovile} alt="" />
+          </motion.div>
+          <motion.div
+            className={style.contentImages}
+            initial={{ x: "100%" }}
+            animate={{ x: [null, "0%", "0%", "0%", "100%"] }}
+            transition={{
+              delay: 12,
+              duration: 5,
+              repeatType: "reverse",
+              repeat: Infinity,
+              repeatDelay: 12,
+            }}
+          >
+            <img src={cardInterviewMovile} alt="" />
+          </motion.div>
+        </div>
+      )}
 
       <div className={style.backgroundVideo}>
         <video autoPlay muted loop>
