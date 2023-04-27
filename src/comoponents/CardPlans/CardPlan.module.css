@@ -15,7 +15,7 @@
 }
 
 .contentAll[data-isOpen="true"] {
-  height: 800px;
+  height: 750px;
 }
 
 .contentAll:hover {
@@ -107,7 +107,7 @@
   align-items: flex-start;
   padding: 0 1rem;
   width: 300px;
-  height: 150px;
+  height: 180px;
   row-gap: 2rem;
   box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
@@ -129,7 +129,7 @@
 }
 
 .contentAllPopular[data-isOpen="true"] {
-  height: 800px;
+  height: 750px;
 }
 
 .contentAllPopular li {
