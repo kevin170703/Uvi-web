@@ -5,7 +5,7 @@ import Footer from "./comoponents/Footer/Footer";
 import Form from "./comoponents/Form/Form";
 import Home from "./comoponents/Home/Home";
 import Navbar from "./comoponents/Navbar/Navbar";
-import Plans from "./comoponents/Plans/Plans";
+import Services from "./comoponents/Services/Services";
 
 function App() {
   const [positionAboutY, setPositionAboutY] = useState();
@@ -17,7 +17,7 @@ function App() {
       <Navbar dataAboutPosition={positionAboutY} />
       <Home />
       <About receiveDataAbout={handleAction} />
-      <Plans />
+      <Services />
       <Form />
       <Footer />
     </div>
