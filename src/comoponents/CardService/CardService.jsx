@@ -1,7 +1,5 @@
 import React from "react";
 import style from "./CardService.module.css";
-import { useState } from "react";
-import { motion } from "framer-motion";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export default function CardService({
@@ -11,7 +9,7 @@ export default function CardService({
   isOpen,
 }) {
   return (
-    <motion.div className={style.contentAll} data-isOpen={isOpen}>
+    <div className={style.contentAll} data-isOpen={isOpen}>
       <div className={style.contentPrimary}>
         <input type="checkbox" />
         <h6 className={style.title}>{character}</h6>
@@ -26,6 +24,6 @@ export default function CardService({
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos laborum
         fugiat facilis, rerum, minima
       </p>
-    </motion.div>
+    </div>
   );
 }
