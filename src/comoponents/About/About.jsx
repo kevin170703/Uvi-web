@@ -6,8 +6,7 @@ import style from "./About.module.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 export default function About({ receiveDataAbout }) {
-  //Animation scroll
-
+  //Animation scroll Navbar
   const aboutRef = useRef();
 
   useEffect(() => {
@@ -18,7 +17,7 @@ export default function About({ receiveDataAbout }) {
     };
     window.addEventListener("scroll", animationScroll);
   }, []);
-  //Animation scroll
+  //Animation scroll Navbar
 
   const [reviw, setReview] = useState(0);
   let reviews = [
