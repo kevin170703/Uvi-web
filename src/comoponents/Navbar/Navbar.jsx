@@ -74,19 +74,6 @@ export default function Navbar({ dataAboutPosition }) {
         </Link>
         <Link
           activeClass="active"
-          to="services"
-          spy={true}
-          smooth={true}
-          offset={20}
-          duration={500}
-          className={style.links}
-          onClick={() => setVistPhone(false)}
-        >
-          Servicios
-        </Link>
-
-        <Link
-          activeClass="active"
           to="about"
           spy={true}
           smooth={true}
@@ -100,22 +87,23 @@ export default function Navbar({ dataAboutPosition }) {
 
         <Link
           activeClass="active"
-          to="plans"
+          to="services"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-20}
           duration={500}
           className={style.links}
           onClick={() => setVistPhone(false)}
         >
-          Planes
+          Servicios
         </Link>
+
         <Link
           activeClass="active"
           to="contact-us"
           spy={true}
           smooth={true}
-          offset={50}
+          offset={0}
           duration={500}
           className={style.links}
           onClick={() => setVistPhone(false)}
