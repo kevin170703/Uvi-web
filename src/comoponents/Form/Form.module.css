@@ -232,4 +232,11 @@
   .contentTitle p {
     text-align: center;
   }
+  .contentInputs {
+    width: 80%;
+  }
+
+  .contentInputs textarea {
+    width: 100%;
+  }
 }

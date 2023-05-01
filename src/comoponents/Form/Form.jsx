@@ -18,15 +18,15 @@ export default function Form() {
           </div>
           <div className={style.contentInputs}>
             {/* <label htmlFor="name">Nombre</label> */}
-            <input type="text" name="name" id="name" placeholder="Nombre" />
+            <input type="text" placeholder="Nombre" />
           </div>
           <div className={style.contentInputs}>
             {/* <label htmlFor="name">Corro electronico</label> */}
-            <input type="text" name="name" id="name" placeholder="Apellido" />
+            <input type="text" placeholder="Apellido" />
           </div>
           <div className={style.contentInputs}>
             {/* <label htmlFor="name">Telefono</label> */}
-            <input type="text" name="name" id="name" placeholder="Telefono" />
+            <input type="text" placeholder="Telefono" />
           </div>
           <div className={style.contentInputs}>
             {/* <label htmlFor="name">Corro electronico</label> */}
