@@ -2,8 +2,6 @@ import React from "react";
 import style from "./Services.module.css";
 import { Reorder } from "framer-motion";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import CardService from "../CardService/CardService";
 
 export default function Services() {
@@ -26,7 +24,7 @@ export default function Services() {
   }
 
   return (
-    <div className={style.contentAll}>
+    <div className={style.contentAll} id="services">
       <div className={style.barra}></div>
       <h3 className={style.title}>Servicios</h3>
       <div className={style.card}>
