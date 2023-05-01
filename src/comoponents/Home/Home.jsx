@@ -142,7 +142,7 @@ export default function Home() {
             to="services"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={-20}
             duration={500}
             className={style.buttonServices}
           >
@@ -153,7 +153,7 @@ export default function Home() {
             to="about"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={20}
             duration={500}
             className={style.buttonAbout}
           >
